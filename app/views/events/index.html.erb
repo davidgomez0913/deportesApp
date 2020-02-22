@@ -1,0 +1,13 @@
+<% @events.each do |event|%>
+<div class="text-center">
+
+<%= event.id %>
+<%= User.find(event.user_id).name %>
+<%= Sport.find(event.sport_id).name%> <br>
+ 
+    <HR width="00%">
+</div>
+<% end %>
+</div>
+<%= button_to "Agregar Evento", "/events/new", method: :get %>
+<%= button_to "Ver Deportes", "/sports", method: :get %>

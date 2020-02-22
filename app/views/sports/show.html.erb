@@ -1,0 +1,9 @@
+<div>
+<%= @sport.name %><br> 
+<%= @sport.numberOfPlayers %> <br> 
+<HR width="00%">
+</div>
+
+<%= button_to "Editar", "/sports/#{@sport.id}/edit", method: :get %> <br>
+<%= button_to "Eliminar", @sport, method: :delete %><br>
+<%= button_to "Mostrar deportes", "/sports#index", method: :get %>

@@ -1,0 +1,14 @@
+<div class="d-flex justify-content-center flex-wrap" >
+<% @sports.each do |sport|%>
+<div class="text-center libros">
+<% if sport.image.attached? %>
+    <%= image_tag(sport.image,style: "width: 100px") %><br>
+<% end %>
+<%= sport.name%> <br>
+<%= sport.numberOfPlayers %> <br>
+    <HR width="00%">
+</div>
+<% end %>
+</div>
+<%= button_to "Agregar Deporte", "/sports/new", method: :get %>
+<%= button_to "Ver Eventos", "/events", method: :get %>
