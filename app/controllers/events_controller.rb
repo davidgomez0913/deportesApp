@@ -8,7 +8,14 @@ class EventsController < ApplicationController
         end
     end
 
+
+    def new
+        @event=Event.new
+    end
+
+
     def show
        @event= Event.find(1) 
     end
+
 end
