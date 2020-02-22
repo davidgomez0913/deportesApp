@@ -12,6 +12,7 @@ module DeportesApp
     config.load_defaults 6.0
     config.hosts << "c2f57047ec5d432eb18ac1582c86445f.vfs.cloud9.us-east-2.amazonaws.com"
     config.assets.initialize_on_precompile = false
+    config.hosts << "f06f5862a5914992a5cc07ef448aee95.vfs.cloud9.us-east-2.amazonaws.com"
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
