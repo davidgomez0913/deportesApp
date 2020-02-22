@@ -5,20 +5,26 @@
 </div>
 
 <div class="field">
-    <%= form.label "Usuario" %><br>
+    <%= form.label "Usuario:" %><br>
     <%= current_user.name %>
-    <%= form.select(:filter, params[:filter], ["Nombre del libro": 1, "Autor": 2,"Genero": 3])%>
 </div>
 
 <div class="field">
-    <%= form.label "Cupos disponibles" %><br>
-</div>
-
-<div class="field">
-    <%= form.label "Deporte" %><br>
+    <%= form.label "Deporte:" %><br>
     <%= form.select :sport_id, options_from_collection_for_select(Sport.all, 'id', 'name') %>
 </div>
 
+<div class="field">
+    <%= form.label "Cupos disponibles:" %><br>
+    <%= form.select :availble_places, [1,2,3,4,5,6,7,8,9,10,11,12,13,14] %>
+</div>
+
+<div class="field">
+    <%= form.label "Tipo de evento:" %><br>
+    <%= form.select :tipo, ["Recracion", "Formacion"] %>
+</div>
+<br>
+<br>
 <div class="field">
     <%= form.submit %>
 </div>

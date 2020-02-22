@@ -1,8 +1,2 @@
-<%= form_for @event do |f| %>
-  <div>Nuevo evento:</div>
-  <div>Usuario: <%= current_user.name %></div>
-  <div>Cupos disponibles <%=  %></div>
-  <div>Deporte: <%= f.select :sport_id, options_from_collection_for_select(Sport.all, 'id', 'name')%></div>
+<%= render 'form' %>
 
-  <%= f.submit %>
-<% end %>
