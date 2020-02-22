@@ -1,0 +1,12 @@
+<div>
+    
+Creador del evento: <%= User.find(@event.user_id).name %><br> 
+Tipo de deporte: <%= Sport.find(@event.sport_id).name %> <br> 
+Tipo de evento: <%= @event.tipo %> <br> 
+Cantidad de cupos: <%= @event.availble_places %> <br> 
+<HR width="00%">
+</div>
+
+<%= button_to "Editar", "/events/#{@event.id}/edit", method: :get %> <br>
+<%= button_to "Eliminar", @event, method: :delete %><br>
+<%= button_to "Mostrar eventos", "/events#index", method: :get %>
