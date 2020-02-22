@@ -8,14 +8,38 @@ class EventsController < ApplicationController
         end
     end
 
-
-    def new
-        @event=Event.new
+    def show
+        @event=Event.find(params[:id])
     end
 
-
-    def show
-       @event= Event.find(1) 
+    def new
+        @event=Event.new()
+    end
+    
+    def create
+        event = Event.create(event_params)
+        redirect_to event
+    end
+    
+    def edit
+        @event=Event.find(params[:id])
+    end
+    
+    def update
+        event = Event.find(params["id"])
+        event.update(event_params)
+        redirect_to event
+    end
+    
+    def destroy
+        Event.find(params["id"]).destroy
+        redirect_to "/events"
+    end
+    
+    private
+    
+    def event_params
+        params.require(:event).permit(:user_id, :availble_places, :sport_id, :tipo)
     end
 
 end

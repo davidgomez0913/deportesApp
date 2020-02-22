@@ -1,0 +1,21 @@
+<%=  form_with model: @sport do |form| %>
+
+<div class="field">
+    <%= form.label "Nuevo deporte" %><br>
+</div>
+
+<div class="field">
+    <%= form.label "Deporte:" %><br>
+    <%= form.text_field :name %>
+   </div>
+
+<div class="field">
+    <%= form.label "Jugadores" %><br>
+    <%= form.number_field :numberOfPlayers %>
+</div>
+
+<div class="field">
+    <%= form.submit %>
+</div>
+
+<% end %>
