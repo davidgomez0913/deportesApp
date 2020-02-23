@@ -6,7 +6,9 @@ Tipo de evento: <%= @event.tipo %> <br>
 Cantidad de cupos: <%= @event.availble_places %> <br> 
 <HR width="00%">
 </div>
-
+<% if(current_user.id==@event.user_id) %>
 <%= button_to "Editar", "/events/#{@event.id}/edit", method: :get %> <br>
 <%= button_to "Eliminar", @event, method: :delete %><br>
+<% end %>
+<%= link_to "Ire!", add_user_path(@event.id, current_user.id), method: :post %>
 <%= button_to "Mostrar eventos", "/events#index", method: :get %>
