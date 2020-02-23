@@ -1,4 +1,4 @@
-class Event_Users < ApplicationRecord  
+class EventUser < ApplicationRecord  
   has_many :users
   belongs_to :event
-  end
+end
