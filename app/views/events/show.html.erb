@@ -10,5 +10,6 @@ Cantidad de cupos: <%= @event.availble_places %> <br>
 <%= button_to "Editar", "/events/#{@event.id}/edit", method: :get %> <br>
 <%= button_to "Eliminar", @event, method: :delete %><br>
 <% end %>
+
 <%= link_to "Ire!", add_user_path(@event.id, current_user.id), method: :post %>
 <%= button_to "Mostrar eventos", "/events#index", method: :get %>

@@ -5,6 +5,7 @@ class EventsUsersController < ApplicationController
     end
     
     def create
+        @event = Event.find(params[:id])
         @event_user = EventUser.new(event_id: @event.id, user_id: current_user.id)
         if @event_user.save
             redirect_to @event
